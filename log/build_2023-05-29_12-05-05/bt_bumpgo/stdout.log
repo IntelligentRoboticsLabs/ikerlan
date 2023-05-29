@@ -1,0 +1,28 @@
+-- Found ament_cmake: 1.3.4 (/opt/ros/humble/share/ament_cmake/cmake)
+-- Override CMake install command with custom implementation using symlinks instead of copying resources
+-- Found rclcpp: 16.0.4 (/opt/ros/humble/share/rclcpp/cmake)
+-- Found rosidl_generator_c: 3.1.4 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+-- Found rosidl_adapter: 3.1.4 (/opt/ros/humble/share/rosidl_adapter/cmake)
+-- Found rosidl_generator_cpp: 3.1.4 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found rmw_implementation_cmake: 6.1.1 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+-- Found rmw_cyclonedds_cpp: 1.3.4 (/opt/ros/humble/share/rmw_cyclonedds_cpp/cmake)
+-- Using RMW implementation 'rmw_cyclonedds_cpp' as default
+-- Found sensor_msgs: 4.2.3 (/opt/ros/humble/share/sensor_msgs/cmake)
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/rod/ros2_ws/ikerlan/build/bt_bumpgo
+[ 50%] [32mBuilding CXX object CMakeFiles/bt_bumpgo.dir/src/bt_bumpgo_main.cpp.o[0m
+[ 30%] [32mBuilding CXX object CMakeFiles/turn_bt_node.dir/src/bt_bumpgo/Turn.cpp.o[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/forward_bt_node.dir/src/bt_bumpgo/Forward.cpp.o[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/is_obstacle_bt_node.dir/src/bt_bumpgo/IsObstacle.cpp.o[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/back_bt_node.dir/src/bt_bumpgo/Back.cpp.o[0m
+[ 60%] [32m[1mLinking CXX executable bt_bumpgo[0m
+[ 70%] [32m[1mLinking CXX shared library libback_bt_node.so[0m
+[ 70%] Built target bt_bumpgo
+[ 80%] [32m[1mLinking CXX shared library libforward_bt_node.so[0m
+[ 80%] Built target back_bt_node
+[ 80%] Built target forward_bt_node
+[ 90%] [32m[1mLinking CXX shared library libis_obstacle_bt_node.so[0m
+[ 90%] Built target is_obstacle_bt_node

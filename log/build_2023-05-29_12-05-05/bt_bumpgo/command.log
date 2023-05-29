@@ -1,0 +1,4 @@
+Invoking command in '/home/rod/ros2_ws/ikerlan/build/bt_bumpgo': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/rod/ros2_ws/ikerlan/src/bt_bumpgo -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/rod/ros2_ws/ikerlan/install/bt_bumpgo
+Invoked command in '/home/rod/ros2_ws/ikerlan/build/bt_bumpgo' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/rod/ros2_ws/ikerlan/src/bt_bumpgo -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/rod/ros2_ws/ikerlan/install/bt_bumpgo
+Invoking command in '/home/rod/ros2_ws/ikerlan/build/bt_bumpgo': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/rod/ros2_ws/ikerlan/build/bt_bumpgo -- -j12 -l12
+Invoked command in '/home/rod/ros2_ws/ikerlan/build/bt_bumpgo' returned '2': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/rod/ros2_ws/ikerlan/build/bt_bumpgo -- -j12 -l12

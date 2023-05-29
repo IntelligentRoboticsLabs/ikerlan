@@ -1,0 +1,4 @@
+[31mCMake Error at CMakeLists.txt:80 (add_subdirectory):
+  add_subdirectory given source "tests" which is not an existing directory.
+
+[0m
