@@ -73,7 +73,6 @@ IsObstacle::tick()
   }
 
   return BT::NodeStatus::FAILURE;
-
 }
 
 }  // namespace bt_bumpgo

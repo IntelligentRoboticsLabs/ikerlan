@@ -45,7 +45,6 @@ Forward::tick()
   vel_pub_->publish(vel_msgs);
 
   // return node status
-
 }
 
 }  // namespace bt_bumpgo

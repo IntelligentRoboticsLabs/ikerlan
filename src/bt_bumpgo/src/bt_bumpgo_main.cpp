@@ -50,7 +50,6 @@ int main(int argc, char * argv[])
 
   bool finish = false;
   while (!finish && rclcpp::ok()) {
-
     finish = tree.rootNode()->executeTick() != BT::NodeStatus::RUNNING;
 
     rclcpp::spin_some(node);
