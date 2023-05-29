@@ -25,6 +25,7 @@ jobs:
         with:
           package-name: bt_bumpgo
           target-ros2-distro: humble
+          import-token: ${{ secrets.CI_TOKEN }}
           vcs-repo-file-url: ""
           colcon-defaults: |
             {
@@ -32,3 +33,6 @@ jobs:
                 "parallel-workers" : 1
               }
             }
+            
+            
+    
