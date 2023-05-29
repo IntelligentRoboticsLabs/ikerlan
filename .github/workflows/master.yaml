@@ -1,12 +1,12 @@
-name: ros2-humble
+name: main
 
 on:
   pull_request:
     branches:
-      - ros2-humble
+      - main
   push:
     branches:
-      - ros2-humble
+      - main
 
 jobs:
   build-and-test:
@@ -23,7 +23,7 @@ jobs:
       - name: build and test
         uses: ros-tooling/action-ros-ci@0.2.6
         with:
-          package-name: ir_robots
+          package-name: bt_bumpgo
           target-ros2-distro: humble
           vcs-repo-file-url: ""
           colcon-defaults: |
