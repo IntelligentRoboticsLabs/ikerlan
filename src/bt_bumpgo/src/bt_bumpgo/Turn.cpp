@@ -49,6 +49,7 @@ Turn::tick()
     start_time_ = node_->now();
   }
 
+  int direction;
   // get direction from blackboard
 
   geometry_msgs::msg::Twist vel_msgs;
@@ -66,6 +67,8 @@ Turn::tick()
   } else {
     // return node status
   }
+
+  return BT::NodeStatus::IDLE; // remove this when implemented (just to compile)
 }
 
 }  // namespace bt_bumpgo
