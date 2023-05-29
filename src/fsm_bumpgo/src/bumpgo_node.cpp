@@ -24,7 +24,8 @@ using std::placeholders::_1;
 class BumpGo : public rclcpp::Node
 {
 public:
-  BumpGo(): Node("fsm_bumpgo"), state_(FORWARD), pressed_(false)
+  BumpGo()
+  : Node("fsm_bumpgo"), state_(FORWARD), pressed_(false)
   {
     // vel_pub_ = create_publisher<...>(...);
     // bumper_sub_ = create_subscription<...>(...);
@@ -43,37 +44,36 @@ public:
     geometry_msgs::msg::Twist cmd;
 
     switch (state_) {
-        case FORWARD:
+      case FORWARD:
         // cmd.linear.x = ...;
         // cmd.angular.z = ...;
 
-        if (pressed_)
-        {
-            state_ts_ = now();
-            state_ = BACK;
-            RCLCPP_INFO(get_logger(), "FORWARD -> BACK");
+        if (pressed_) {
+          state_ts_ = now();
+          state_ = BACK;
+          RCLCPP_INFO(get_logger(), "FORWARD -> BACK");
         }
         break;
 
-        case BACK:
+      case BACK:
         // cmd.linear.x = ...;
         // cmd.angular.z = ...;
 
-        if ((now() - state_ts_) > BACKING_TIME ) {
-            state_ts_ = now();
-            state_ = TURN;
-            RCLCPP_INFO(get_logger(), "BACK -> TURN");
+        if ((now() - state_ts_) > BACKING_TIME) {
+          state_ts_ = now();
+          state_ = TURN;
+          RCLCPP_INFO(get_logger(), "BACK -> TURN");
         }
 
         break;
 
-        case TURN:
+      case TURN:
         // cmd.linear.x = ...;
         // cmd.angular.z = ...;
 
-        if ((now() - state_ts_) > TURNING_TIME ) {
-            state_ = FORWARD;
-            RCLCPP_INFO(get_logger(), "TURN -> FORWARD");
+        if ((now() - state_ts_) > TURNING_TIME) {
+          state_ = FORWARD;
+          RCLCPP_INFO(get_logger(), "TURN -> FORWARD");
         }
 
         break;
@@ -101,7 +101,7 @@ private:
 };
 
 
-int main(int argc, char **argv)
+int main(int argc, char ** argv)
 {
   rclcpp::init(argc, argv);
 

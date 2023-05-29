@@ -44,7 +44,7 @@ Forward::tick()
   vel_msgs.linear.x = 0.3;
   vel_pub_->publish(vel_msgs);
 
-  // return node status 
+  // return node status
 
 }
 

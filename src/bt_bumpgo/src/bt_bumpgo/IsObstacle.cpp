@@ -57,23 +57,23 @@ IsObstacle::tick()
 
   double distance = 1.0;
   getInput("distance", distance);
-  
-  for(pos = 0; pos < last_scan_->ranges.size()/2; pos++) {
-    if(last_scan_->ranges[pos] < distance) {
+
+  for (pos = 0; pos < last_scan_->ranges.size() / 2; pos++) {
+    if (last_scan_->ranges[pos] < distance) {
       // set direction in blackboard
       // return node status
     }
   }
 
-  for(pos = (last_scan_->ranges.size()/2 + 1); pos < last_scan_->ranges.size(); pos++) {
-    if(last_scan_->ranges[pos] < distance) {
+  for (pos = (last_scan_->ranges.size() / 2 + 1); pos < last_scan_->ranges.size(); pos++) {
+    if (last_scan_->ranges[pos] < distance) {
       // set direction in blackboard
       // return node status
     }
   }
 
   return BT::NodeStatus::FAILURE;
-  
+
 }
 
 }  // namespace bt_bumpgo

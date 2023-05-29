@@ -55,10 +55,11 @@ Turn::tick()
   geometry_msgs::msg::Twist vel_msgs;
   vel_msgs.angular.z = 0.5;
 
-  if(direction == 1)
+  if (direction == 1) {
     // change turning direction
-    
-  vel_pub_->publish(vel_msgs);
+
+    vel_pub_->publish(vel_msgs);
+  }
 
   auto elapsed = node_->now() - start_time_;
 
