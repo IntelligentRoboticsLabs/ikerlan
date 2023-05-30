@@ -27,3 +27,11 @@ repositories:
         type: git
         url: https://github.com/Juancams/ros_astra_camera.git
         version: ros2
+    ThirdParty/ros_astra_camera:
+        type: git
+        url: https://github.com/Juancams/ros_astra_camera.git
+        version: ros2
+    ThirdParty/sophus:
+    type: git
+    url: https://github.com/stonier/sophus.git
+    version: release/1.2.x
