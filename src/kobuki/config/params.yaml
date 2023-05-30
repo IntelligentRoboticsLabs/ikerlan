@@ -1,0 +1,9 @@
+# Kobuki options:
+#
+# Kobuki camera: none - xtion - astra
+# Kobuki lidar: true - false
+
+kobuki:
+  camera: none
+  lidar: true
+  map: map
