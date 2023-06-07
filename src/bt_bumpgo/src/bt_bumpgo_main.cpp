@@ -28,6 +28,7 @@ int main(int argc, char * argv[])
 {
   rclcpp::init(argc, argv);
 
+
   auto node = rclcpp::Node::make_shared("bumpgo_node");
   std::cout << "bt_bumpgo_main" << std::endl;
 
