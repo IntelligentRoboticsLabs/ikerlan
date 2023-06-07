@@ -15,7 +15,7 @@
 #include <utility>
 #include "rclcpp/rclcpp.hpp"
 
-#include "kobuki_ros_interfaces/msg/button_event.hpp"
+#include "kobuki_ros_interfaces/msg/bumper_event.hpp"
 #include "geometry_msgs/msg/twist.hpp"
 
 using namespace std::chrono_literals; // NOLINT
@@ -32,7 +32,7 @@ public:
     timer_ = create_wall_timer(50ms, std::bind(&BumpGo::step, this));
   }
 
-  void bumperCallback(const kobuki_ros_interfaces::msg::ButtonEvent::UniquePtr msg)
+  void bumperCallback(const kobuki_ros_interfaces::msg::BumperEvent::UniquePtr msg)
   {
     // pressed_ = (...);
 
@@ -93,9 +93,8 @@ private:
 
   const rclcpp::Duration TURNING_TIME {2s};
   const rclcpp::Duration BACKING_TIME {2s};
-  const rclcpp::Duration SCAN_TIMEOUT {1s};
 
-  rclcpp::Subscription<kobuki_ros_interfaces::msg::ButtonEvent>::SharedPtr bumper_sub_;
+  rclcpp::Subscription<kobuki_ros_interfaces::msg::BumperEvent>::SharedPtr bumper_sub_;
   rclcpp::Publisher<geometry_msgs::msg::Twist>::SharedPtr vel_pub_;
   rclcpp::TimerBase::SharedPtr timer_;
 };
