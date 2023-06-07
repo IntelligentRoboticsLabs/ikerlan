@@ -45,6 +45,8 @@ Forward::tick()
   vel_pub_->publish(vel_msgs);
 
   // return node status
+
+  return BT::NodeStatus::IDLE;  // remove this when implemented (just to compile)
 }
 
 }  // namespace bt_bumpgo
