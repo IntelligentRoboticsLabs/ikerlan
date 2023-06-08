@@ -4,8 +4,6 @@
        <rtps>
            <builtin>
                <metatrafficUnicastLocatorList>
-                   <locator/>
-               </metatrafficUnicastLocatorList>
                    <locator>
                        <udpv4>
                            <address>10.1.149.93</address>
@@ -16,7 +14,8 @@
                            <address>10.1.134.228</address>
                        </udpv4>
                    </locator>
-           </builtin>
+                </metatrafficUnicastLocatorList>
+           </builtin>   
        </rtps>
    </participant>
 </profiles>
