@@ -6,14 +6,16 @@
                <metatrafficUnicastLocatorList>
                    <locator/>
                </metatrafficUnicastLocatorList>
-               <initialPeersList>
                    <locator>
                        <udpv4>
                            <address>10.1.149.93</address>
+                       </udpv4>
+                   </locator>
+                   <locator>
+                       <udpv4>
                            <address>10.1.134.228</address>
                        </udpv4>
                    </locator>
-               </initialPeersList>
            </builtin>
        </rtps>
    </participant>
