@@ -23,7 +23,7 @@ jobs:
       - name: build and test
         uses: ros-tooling/action-ros-ci@0.2.6
         with:
-          package-name: bt_bumpgo
+          package-name: bt_bumpgo dds_demos fsm_bumpgo kobuki tiago
           target-ros2-distro: humble
           import-token: ${{ secrets.CI_TOKEN }}
           vcs-repo-file-url: ""
