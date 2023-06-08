@@ -3,6 +3,18 @@
    <participant profile_name="unicast_connection" is_default_profile="true">
        <rtps>
            <builtin>
+                <initialPeersList>
+                    <locator>
+                        <udpv4>
+                            <address>10.1.149.93</address>
+                        </udpv4>
+                    </locator>
+                    <locator>
+                        <udpv4>
+                            <address>10.1.134.228</address>
+                        </udpv4>
+                    </locator>
+                </initialPeersList>
                <metatrafficUnicastLocatorList>
                    <locator>
                        <udpv4>
