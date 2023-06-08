@@ -33,6 +33,7 @@ public:
   RCLCPP_SMART_PTR_DEFINITIONS(VectorConsumer)
 
   VectorConsumer(
+    const rclcpp::NodeOptions & options = rclcpp::NodeOptions(),
     rclcpp::CallbackGroupType callback_option = rclcpp::CallbackGroupType::MutuallyExclusive);
 
 private:

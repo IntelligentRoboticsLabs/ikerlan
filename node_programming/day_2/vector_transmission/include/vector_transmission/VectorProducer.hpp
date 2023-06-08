@@ -32,7 +32,7 @@ class VectorProducer : public rclcpp::Node
 public:
   RCLCPP_SMART_PTR_DEFINITIONS(VectorProducer)
 
-  VectorProducer();
+  VectorProducer(const rclcpp::NodeOptions & options = rclcpp::NodeOptions());
 
 private:
   void control_cycle();

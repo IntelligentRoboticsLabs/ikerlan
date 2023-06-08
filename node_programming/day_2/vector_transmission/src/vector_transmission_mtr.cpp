@@ -24,6 +24,7 @@ int main(int argc, char * argv[])
 
   auto node_producer = vector_transmission::VectorProducer::make_shared();
   auto node_consumer = vector_transmission::VectorConsumer::make_shared(
+    rclcpp::NodeOptions(),
     rclcpp::CallbackGroupType::Reentrant);
 
   rclcpp::executors::MultiThreadedExecutor exe(rclcpp::ExecutorOptions(), 8);

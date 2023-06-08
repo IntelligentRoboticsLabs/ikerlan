@@ -26,19 +26,22 @@ using namespace std::chrono_literals;
 namespace vector_transmission
 {
 
-VectorConsumer::VectorConsumer(rclcpp::CallbackGroupType callback_option)
-: Node("vector_consumer"),
+VectorConsumer::VectorConsumer(
+  const rclcpp::NodeOptions & options,
+  rclcpp::CallbackGroupType callback_option
+)
+: Node("vector_consumer", options),
   vector_(100, 0.0f)
 {
   callback_group_ = create_callback_group(callback_option);
 
-  rclcpp::SubscriptionOptions options;
-  options.callback_group = callback_group_;
+  rclcpp::SubscriptionOptions sub_options;
+  sub_options.callback_group = callback_group_;
 
   vector_1_sub_ = create_subscription<vector_transmission_msgs::msg::Vector>(
-    "vector_1", 10, std::bind(&VectorConsumer::vector_callback_1, this, _1), options);
+    "vector_1", 10, std::bind(&VectorConsumer::vector_callback_1, this, _1), sub_options);
   vector_2_sub_ = create_subscription<vector_transmission_msgs::msg::Vector>(
-    "vector_2", 10, std::bind(&VectorConsumer::vector_callback_2, this, _1), options);
+    "vector_2", 10, std::bind(&VectorConsumer::vector_callback_2, this, _1), sub_options);
   sum_pub_ = create_publisher<std_msgs::msg::Float32>("sum_vector", 100);
 
   timer_ =
@@ -86,3 +89,10 @@ VectorConsumer::control_cycle()
 }
 
 }  // namespace vector_transmission
+
+#include "rclcpp_components/register_node_macro.hpp"
+
+// Register the component with class_loader.
+// This acts as a sort of entry point, allowing the component to be discoverable when its library
+// is being loaded into a running process.
+RCLCPP_COMPONENTS_REGISTER_NODE(vector_transmission::VectorConsumer)

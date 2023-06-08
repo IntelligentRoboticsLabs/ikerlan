@@ -24,8 +24,8 @@ using namespace std::chrono_literals;
 namespace vector_transmission
 {
 
-VectorProducer::VectorProducer()
-: Node("vector_producer")
+VectorProducer::VectorProducer(const rclcpp::NodeOptions & options)
+: Node("vector_producer", options)
 {
   vector_msg_.data = std::vector<float>(100, 1.0f);
   vector_1_pub_ = create_publisher<vector_transmission_msgs::msg::Vector>("vector_1", 1000);
@@ -42,3 +42,10 @@ VectorProducer::control_cycle()
 }
 
 }  // namespace vector_transmission
+
+#include "rclcpp_components/register_node_macro.hpp"
+
+// Register the component with class_loader.
+// This acts as a sort of entry point, allowing the component to be discoverable when its library
+// is being loaded into a running process.
+RCLCPP_COMPONENTS_REGISTER_NODE(vector_transmission::VectorProducer)

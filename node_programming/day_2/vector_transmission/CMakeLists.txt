@@ -8,11 +8,13 @@ endif()
 # find dependencies
 find_package(ament_cmake REQUIRED)
 find_package(rclcpp REQUIRED)
+find_package(rclcpp_components REQUIRED)
 find_package(std_msgs REQUIRED)
 find_package(vector_transmission_msgs REQUIRED)
 
 set(dependencies
   rclcpp
+  rclcpp_components
   std_msgs
   vector_transmission_msgs
 )
@@ -37,6 +39,9 @@ add_executable(vector_transmission_st src/vector_transmission_st.cpp)
 ament_target_dependencies(vector_transmission_st ${dependencies})
 target_link_libraries(vector_transmission_st ${PROJECT_NAME})
 
+rclcpp_components_register_nodes(${PROJECT_NAME} "vector_transmission::VectorConsumer")
+rclcpp_components_register_nodes(${PROJECT_NAME} "vector_transmission::VectorProducer")
+
 install(TARGETS
   ${PROJECT_NAME}
   vector_transmission_mt
@@ -46,6 +51,8 @@ install(TARGETS
   LIBRARY DESTINATION lib
   RUNTIME DESTINATION lib/${PROJECT_NAME}
 )
+
+install(DIRECTORY launch DESTINATION share/${PROJECT_NAME})
 
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)
