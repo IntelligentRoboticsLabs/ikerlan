@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<profiles xmlns="http://www.eprosima.com/XMLSchemas/fastRTPS_Profiles">
+    <participant profile_name="server_example">
+        <rtps>
+            <!-- Set SERVER's GUID prefix -->
+            <prefix>44.53.00.5f.45.50.52.4f.53.49.4d.41</prefix>
+            <builtin>
+                <!-- Set participant as SERVER -->
+                <discovery_config>
+                    <discoveryProtocol>SERVER</discoveryProtocol>
+                    <!--
+                        Set a list of remote servers to which this server connects.
+                        This list may contain one or more <RemoteServer> tags
+                    -->
+                    <discoveryServersList>
+                        <!--
+                            Set remote server configuration:
+                                - Prefix
+                                - PDP listening locator
+                        -->
+                        <RemoteServer prefix="44.53.01.5f.45.50.52.4f.53.49.4d.41">
+                            <metatrafficUnicastLocatorList>
+                                <!-- Set SERVER's listening locator for PDP -->
+                                <locator>
+                                    <udpv4>
+                                        <address>127.0.0.1</address>
+                                        <port>11812</port>
+                                    </udpv4>
+                                </locator>
+                            </metatrafficUnicastLocatorList>
+                        </RemoteServer>
+                    </discoveryServersList>
+                </discovery_config>
+                <!-- Set SERVER's listening locator for PDP -->
+                <metatrafficUnicastLocatorList>
+                    <locator>
+                        <udpv4>
+                            <address>127.0.0.1</address>
+                            <port>11811</port>
+                        </udpv4>
+                    </locator>
+                </metatrafficUnicastLocatorList>
+            </builtin>
+        </rtps>
+    </participant>
+</profiles>
