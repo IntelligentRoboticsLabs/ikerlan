@@ -38,7 +38,7 @@ int main(int argc, char ** argv)
   // Initialize ROS and create a node
   rclcpp::init(argc, argv);
   rclcpp::NodeOptions options;
-  rclcpp::Node::SharedPtr node_ = rclcpp::Node::make_shared("image_transport", options);
+  rclcpp::Node::SharedPtr node_ = rclcpp::Node::make_shared("image_subscriber", options);
 
   std::string topic_image_ = "image_transport";
   // Add a slash to the topic name if it does not have one
