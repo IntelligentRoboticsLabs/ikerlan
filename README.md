@@ -11,7 +11,7 @@ Prepare your thirparty repos:
 sudo apt update
 sudo apt install python3-vcstool python3-pip python3-rosdep python3-colcon-common-extensions -y
 cd <ros2-workspace>/src/
-vcs import < ir_robots/thirdparty.repos
+vcs import < ikerlan/thirdparty.repos
 ```
 
 *Please make sure that this last command has not failed. If this happens, run it again.*
