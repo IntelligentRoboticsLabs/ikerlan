@@ -11,7 +11,6 @@
 
   <depend>rclcpp</depend>
   <depend>OpenCV</depend>
-  <depend>rclcpp</depend>
   <depend>cv_bridge</depend>
   <depend>ament_index_cpp</depend>
   <depend>image_transport</depend>
