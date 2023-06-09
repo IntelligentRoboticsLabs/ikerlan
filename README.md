@@ -4,9 +4,6 @@
 ![distro](https://img.shields.io/badge/ROS2-Humble-blue)
 [![main](https://github.com/IntelligentRoboticsLabs/ikerlan/actions/workflows/master.yaml/badge.svg?branch=main)](https://github.com/IntelligentRoboticsLabs/ikerlan/actions/workflows/master.yaml)
 
-**Recommended: use [Eclipse Cyclone DDS](https://docs.ros.org/en/foxy/Installation/DDS-Implementations/Working-with-Eclipse-CycloneDDS.html). 
-You can do this by installing it with `sudo apt install ros-humble-rmw-cyclonedds-cpp` and setting the `RMW_IMPLEMENTATION` environment variable: `export RMW_IMPLEMENTATION=rmw_cyclonedds_cpp`. Add it to your `.bashrc`**
-
 # Installation on your own computer
 
 Prepare your thirparty repos:
